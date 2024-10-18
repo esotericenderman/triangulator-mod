@@ -1,4 +1,4 @@
-package dev.enderman.minecraft.mods.triangulator.util;
+package dev.enderman.minecraft.mods.triangulator.utility;
 
 import org.joml.Vector2d;
 

@@ -1,6 +1,6 @@
 package dev.enderman.minecraft.mods.triangulator;
 
-import dev.enderman.minecraft.mods.triangulator.util.VectorUtil;
+import dev.enderman.minecraft.mods.triangulator.utility.VectorUtil;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

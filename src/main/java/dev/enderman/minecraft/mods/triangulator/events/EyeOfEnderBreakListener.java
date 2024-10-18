@@ -7,7 +7,7 @@ import dev.enderman.minecraft.mods.triangulator.Line;
 import dev.enderman.minecraft.mods.triangulator.Line.SameLineException;
 import dev.enderman.minecraft.mods.triangulator.Line.ZeroVectorException;
 import dev.enderman.minecraft.mods.triangulator.Triangulator;
-import dev.enderman.minecraft.mods.triangulator.util.MapUtil;
+import dev.enderman.minecraft.mods.triangulator.utility.MapUtil;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
 
