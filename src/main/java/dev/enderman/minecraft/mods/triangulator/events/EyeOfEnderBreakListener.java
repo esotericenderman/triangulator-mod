@@ -7,7 +7,7 @@ import dev.enderman.minecraft.mods.triangulator.Line;
 import dev.enderman.minecraft.mods.triangulator.Line.SameLineException;
 import dev.enderman.minecraft.mods.triangulator.Line.ZeroVectorException;
 import dev.enderman.minecraft.mods.triangulator.Triangulator;
-import dev.enderman.minecraft.mods.triangulator.utility.MapUtil;
+import dev.enderman.minecraft.mods.triangulator.utility.MapUtility;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
 
@@ -39,7 +39,7 @@ public class EyeOfEnderBreakListener {
 
         Vec3d endPosition = new Vec3d(x, y, z);
 
-        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtil.inverMap(triangulator.startingPositionEyeMap);
+        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtility.inverMap(triangulator.startingPositionEyeMap);
         Vec3d startingPosition = null;
 
         for (Map.Entry<EyeOfEnderEntity, Vec3d> entry : eyePositionMap.entrySet()) {

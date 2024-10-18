@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapUtil {
+public class MapUtility {
 
     public static <K, V> @NotNull Map<V, K> inverMap(@NotNull Map<K, V> map) {
         HashMap<V, K> invertedMap = new HashMap<>();

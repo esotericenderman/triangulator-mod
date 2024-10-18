@@ -4,7 +4,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
 
-public class VectorUtil {
+public class VectorUtility {
 
     @Contract(pure = true)
     public static boolean isZeroVector(@NotNull Vector2d vector) {

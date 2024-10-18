@@ -1,6 +1,6 @@
 package dev.enderman.minecraft.mods.triangulator;
 
-import dev.enderman.minecraft.mods.triangulator.utility.VectorUtil;
+import dev.enderman.minecraft.mods.triangulator.utility.VectorUtility;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +20,7 @@ public class Line {
     }
 
     public Line(Vector2d startingPoint, Vector2d directionVector) throws ZeroVectorException {
-        if (VectorUtil.isZeroVector(directionVector)) {
+        if (VectorUtility.isZeroVector(directionVector)) {
             throw new ZeroVectorException();
         }
 
@@ -29,8 +29,8 @@ public class Line {
     }
 
     @NotNull public Vector2d getPointForParameterValue(double parameterValue) {
-        Vector2d startingPointClone = VectorUtil.cloneVector(startingPoint);
-        Vector2d directionVectorClone = VectorUtil.cloneVector(directionVector); 
+        Vector2d startingPointClone = VectorUtility.cloneVector(startingPoint);
+        Vector2d directionVectorClone = VectorUtility.cloneVector(directionVector);
 
         return startingPointClone.add(directionVectorClone.mul(parameterValue));
     }
@@ -40,7 +40,7 @@ public class Line {
             throw new PointNotOnLineException();
         }
 
-        Vector2d pointClone = VectorUtil.cloneVector(point);
+        Vector2d pointClone = VectorUtility.cloneVector(point);
 
         Vector2d distanceFromStartingPoint = pointClone.sub(startingPoint);
 
@@ -54,7 +54,7 @@ public class Line {
 
         Vector2d otherDirectionVector = otherLine.directionVector;
 
-        if (VectorUtil.areLinearlyDependent(otherDirectionVector, directionVector)) { // The lines are parallel but not equal
+        if (VectorUtility.areLinearlyDependent(otherDirectionVector, directionVector)) { // The lines are parallel but not equal
             return null;
         }
 
@@ -92,7 +92,7 @@ public class Line {
     public boolean includesPoint(@NotNull Vector2d point) {
         Vector2d clonedPoint = new Vector2d(point.x, point.y);
 
-        return clonedPoint.equals(startingPoint) || VectorUtil.areLinearlyDependent(clonedPoint.sub(startingPoint), directionVector);
+        return clonedPoint.equals(startingPoint) || VectorUtility.areLinearlyDependent(clonedPoint.sub(startingPoint), directionVector);
     }
 
     @Override
@@ -106,7 +106,7 @@ public class Line {
                 return true;
             }
 
-            return includesPoint(otherLine.startingPoint) && VectorUtil.areLinearlyDependent(directionVector, otherLine.directionVector);
+            return includesPoint(otherLine.startingPoint) && VectorUtility.areLinearlyDependent(directionVector, otherLine.directionVector);
         }
 
         return false;
