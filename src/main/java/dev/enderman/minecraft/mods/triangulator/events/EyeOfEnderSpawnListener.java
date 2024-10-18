@@ -18,7 +18,7 @@ public class EyeOfEnderSpawnListener {
 
     public void registerListener() {
         ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
-            TriangulatorMod.LOGGER.info("Entity {} has been loaded in {}.", entity, world);;
+            TriangulatorMod.LOGGER.debug("Entity {} has been loaded in {}.", entity, world);;
 
             if (entity instanceof EyeOfEnderEntity eyeOfEnder) {
                 TriangulatorMod.LOGGER.info("Entity is an eye of ender entity.");
