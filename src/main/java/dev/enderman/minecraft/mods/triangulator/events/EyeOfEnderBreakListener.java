@@ -1,13 +1,13 @@
-package net.slqmy.triangulator.events;
+package dev.enderman.minecraft.mods.triangulator.events;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.util.math.Vec3d;
-import net.slqmy.triangulator.Line;
-import net.slqmy.triangulator.Line.SameLineException;
-import net.slqmy.triangulator.Line.ZeroVectorException;
-import net.slqmy.triangulator.Triangulator;
-import net.slqmy.triangulator.util.MapUtil;
+import dev.enderman.minecraft.mods.triangulator.Line;
+import dev.enderman.minecraft.mods.triangulator.Line.SameLineException;
+import dev.enderman.minecraft.mods.triangulator.Line.ZeroVectorException;
+import dev.enderman.minecraft.mods.triangulator.Triangulator;
+import dev.enderman.minecraft.mods.triangulator.util.MapUtil;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
 

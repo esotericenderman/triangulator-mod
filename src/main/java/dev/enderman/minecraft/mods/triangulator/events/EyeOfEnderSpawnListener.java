@@ -1,9 +1,9 @@
-package net.slqmy.triangulator.events;
+package dev.enderman.minecraft.mods.triangulator.events;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.util.math.Vec3d;
-import net.slqmy.triangulator.Triangulator;
+import dev.enderman.minecraft.mods.triangulator.Triangulator;
 import org.jetbrains.annotations.NotNull;
 
 public class EyeOfEnderSpawnListener {

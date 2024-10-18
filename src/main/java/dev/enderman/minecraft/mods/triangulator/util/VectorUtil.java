@@ -1,4 +1,4 @@
-package net.slqmy.triangulator.util;
+package dev.enderman.minecraft.mods.triangulator.util;
 
 import org.joml.Vector2d;
 

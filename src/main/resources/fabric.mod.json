@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.slqmy.triangulator.Triangulator"
+			"dev.enderman.minecraft.mods.triangulator.Triangulator"
 		]
 	},
 	"depends": {

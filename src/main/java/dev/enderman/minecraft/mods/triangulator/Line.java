@@ -1,6 +1,6 @@
-package net.slqmy.triangulator;
+package dev.enderman.minecraft.mods.triangulator;
 
-import net.slqmy.triangulator.util.VectorUtil;
+import dev.enderman.minecraft.mods.triangulator.util.VectorUtil;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -1,4 +1,4 @@
-package net.slqmy.triangulator;
+package dev.enderman.minecraft.mods.triangulator;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

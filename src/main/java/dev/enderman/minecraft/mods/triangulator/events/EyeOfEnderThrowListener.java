@@ -1,4 +1,4 @@
-package net.slqmy.triangulator.events;
+package dev.enderman.minecraft.mods.triangulator.events;
 
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.minecraft.entity.player.PlayerEntity;
@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
-import net.slqmy.triangulator.Triangulator;
+import dev.enderman.minecraft.mods.triangulator.Triangulator;
 import org.jetbrains.annotations.NotNull;
 
 public class EyeOfEnderThrowListener {

@@ -1,13 +1,13 @@
-package net.slqmy.triangulator;
+package dev.enderman.minecraft.mods.triangulator;
 
 import java.util.ArrayList;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.util.math.Vec3d;
-import net.slqmy.triangulator.events.EyeOfEnderBreakListener;
-import net.slqmy.triangulator.events.EyeOfEnderSpawnListener;
-import net.slqmy.triangulator.events.EyeOfEnderThrowListener;
+import dev.enderman.minecraft.mods.triangulator.events.EyeOfEnderBreakListener;
+import dev.enderman.minecraft.mods.triangulator.events.EyeOfEnderSpawnListener;
+import dev.enderman.minecraft.mods.triangulator.events.EyeOfEnderThrowListener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
