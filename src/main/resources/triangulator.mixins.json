@@ -1,8 +1,0 @@
-{
-	"required": true,
-	"package": "net.slqmy.triangulator.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"injectors": {
-		"defaultRequire": 1
-	}
-}
