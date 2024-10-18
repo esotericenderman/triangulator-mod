@@ -117,19 +117,19 @@ public class Line {
         return "{(" + startingPoint.x + ", " + startingPoint.y + ") + t × (" + directionVector.x + ", " + directionVector.y + ") | t ∈ R}";
     }
 
-    public class ZeroVectorException extends Exception {
+    public static class ZeroVectorException extends Exception {
         ZeroVectorException() {
             super("The direction vector must not be the zero vector (0, 0)!");
         }
     }
 
-    public class SameLineException extends Exception {
+    public static class SameLineException extends Exception {
         SameLineException() {
             super("Cannot check intersection with the same line.");
         }
     }
 
-    public class PointNotOnLineException extends Exception {
+    public static class PointNotOnLineException extends Exception {
         PointNotOnLineException() {
             super("Point is not on the line.");
         }
