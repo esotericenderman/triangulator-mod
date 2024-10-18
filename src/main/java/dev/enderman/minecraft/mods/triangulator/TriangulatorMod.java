@@ -2,7 +2,6 @@ package dev.enderman.minecraft.mods.triangulator;
 
 import java.util.ArrayList;
 
-import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.util.math.Vec3d;
@@ -17,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TriangulatorMod implements ClientModInitializer {
+public class TriangulatorMod implements ModInitializer {
 
 	public static final String MOD_ID = "triangulator";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -34,7 +33,7 @@ public class TriangulatorMod implements ClientModInitializer {
 	}
 
 	@Override
-	public void onInitializeClient() {
+	public void onInitialize() {
 		LOGGER.info("[Triangulator]: Initialising Triangulator mod.");
 
 		new EyeOfEnderThrowListener(this);
