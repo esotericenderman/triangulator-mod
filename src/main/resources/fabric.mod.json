@@ -37,8 +37,7 @@
 		"modmenu": {
 			"parent": {
 				"icon": "assets/triangulator/icon.png"
-			},
-			"update_checker": true
+			}
 		}
 	}
 }
