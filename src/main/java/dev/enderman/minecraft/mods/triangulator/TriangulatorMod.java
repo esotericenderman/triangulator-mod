@@ -13,20 +13,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TriangulatorMod implements ModInitializer {
 
 	public static final String MOD_ID = "triangulator";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	private final HashMap<Vec3d, EyeOfEnderEntity> startingPositionEyeMap = new HashMap<>();
-	private final ArrayList<Line> eyeOfEnderDirections = new ArrayList<>();
+	private final Map<Vec3d, EyeOfEnderEntity> startingPositionEyeMap = new HashMap<>();
+	private final List<Line> eyeOfEnderDirections = new ArrayList<>();
 
-	public HashMap<Vec3d, EyeOfEnderEntity> getStartingPositionEyeMap() {
+	public Map<Vec3d, EyeOfEnderEntity> getStartingPositionEyeMap() {
 		return startingPositionEyeMap;
 	}
 
-	public ArrayList<Line> getEyeOfEnderDirections() {
+	public List<Line> getEyeOfEnderDirections() {
 		return eyeOfEnderDirections;
 	}
 

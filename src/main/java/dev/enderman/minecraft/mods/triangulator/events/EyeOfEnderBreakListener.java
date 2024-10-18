@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class EyeOfEnderBreakListener {
@@ -76,7 +77,7 @@ public class EyeOfEnderBreakListener {
 
         TriangulatorMod.LOGGER.info("The line l of the path of the eye of ender is defined as follows: l = {}", eyeOfEnderDirection);
 
-        ArrayList<Line> eyeOfEnderDirections = mod.getEyeOfEnderDirections();
+        List<Line> eyeOfEnderDirections = mod.getEyeOfEnderDirections();
 
         if (!eyeOfEnderDirections.contains(eyeOfEnderDirection)) {
             for (Line direction : eyeOfEnderDirections) {
