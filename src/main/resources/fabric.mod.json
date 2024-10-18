@@ -1,41 +1,36 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"id": "triangulator",
+	"version": "0.0.1",
+	"name": "Triangulator",
+	"description": "Finds the exact location of a stronghold by throwing just 2 eyes of ender!",
 	"authors": [
-		"Me!"
+		{
+			"name": "Esoteric Enderman",
+			"contact": {
+				"email": "esotericenderman@gmail.com",
+				"homepage": "https://www.github.com/EsotericEnderman",
+				"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
+				"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
+			}
+		}
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/triangulator/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+			"dev.enderman.minecraft.mods.triangulator.Triangulator"
 		]
 	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
-		"fabricloader": ">=0.16.2",
-		"minecraft": "~1.21.1",
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
