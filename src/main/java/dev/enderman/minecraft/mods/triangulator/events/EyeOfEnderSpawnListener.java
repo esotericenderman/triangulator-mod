@@ -12,6 +12,8 @@ public class EyeOfEnderSpawnListener {
 
     public EyeOfEnderSpawnListener(TriangulatorMod mod) {
         this.mod = mod;
+
+        registerListener();
     }
 
     public void registerListener() {

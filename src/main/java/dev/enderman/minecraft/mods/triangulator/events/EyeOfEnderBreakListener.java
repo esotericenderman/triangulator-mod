@@ -20,6 +20,8 @@ public class EyeOfEnderBreakListener {
 
     public EyeOfEnderBreakListener(TriangulatorMod mod) {
         this.mod = mod;
+
+        registerListener();
     }
 
     public void registerListener() {

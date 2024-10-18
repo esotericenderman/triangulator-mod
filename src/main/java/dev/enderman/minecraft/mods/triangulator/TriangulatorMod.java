@@ -26,8 +26,8 @@ public class TriangulatorMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("[Triangulator]: Initialising Triangulator mod.");
 
-		new EyeOfEnderThrowListener(this).registerListener();
-		new EyeOfEnderSpawnListener(this).registerListener();
-		new EyeOfEnderBreakListener(this).registerListener();
+		new EyeOfEnderThrowListener(this);
+		new EyeOfEnderSpawnListener(this);
+		new EyeOfEnderBreakListener(this);
 	}
 }
