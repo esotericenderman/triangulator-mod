@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MapUtil {
+
     public static <K, V> Map<V, K> inverMap(Map<K, V> map) {
         HashMap<V, K> invertedMap = new HashMap<>();
 

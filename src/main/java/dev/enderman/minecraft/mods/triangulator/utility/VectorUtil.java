@@ -3,6 +3,7 @@ package dev.enderman.minecraft.mods.triangulator.utility;
 import org.joml.Vector2d;
 
 public class VectorUtil {
+
     public static boolean isZeroVector(Vector2d vector) {
         return vector.x == 0 && vector.y == 0;
     }

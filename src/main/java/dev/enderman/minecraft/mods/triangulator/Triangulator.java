@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class Triangulator implements ModInitializer {
+
 	public static final String MOD_ID = "triangulator";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
