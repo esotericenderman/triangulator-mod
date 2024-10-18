@@ -74,10 +74,10 @@ public class EyeOfEnderBreakListener {
 
         Triangulator.LOGGER.info("The line l of the path of the eye of ender is defined as follows: l = {}", eyeOfEnderDirection);
 
-        ArrayList<Line> eyeOfEnderDriections = triangulator.eyeOfEnderDirections;
+        ArrayList<Line> eyeOfEnderDirections = triangulator.eyeOfEnderDirections;
 
-        if (!eyeOfEnderDriections.contains(eyeOfEnderDirection)) {
-            for (Line direction : eyeOfEnderDriections) {
+        if (!eyeOfEnderDirections.contains(eyeOfEnderDirection)) {
+            for (Line direction : eyeOfEnderDirections) {
                 Vector2d intersection;
 
                 try {

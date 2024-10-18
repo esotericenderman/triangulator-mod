@@ -19,13 +19,13 @@ public class Line {
         return directionVector;
     }
 
-    public Line(Vector2d startingPoint, Vector2d direcitonVector) throws ZeroVectorException {
-        if (VectorUtil.isZeroVector(direcitonVector)) {
+    public Line(Vector2d startingPoint, Vector2d directionVector) throws ZeroVectorException {
+        if (VectorUtil.isZeroVector(directionVector)) {
             throw new ZeroVectorException();
         }
 
         this.startingPoint = startingPoint;
-        this.directionVector = direcitonVector;
+        this.directionVector = directionVector;
     }
 
     @NotNull public Vector2d getPointForParameterValue(double parameterValue) {
