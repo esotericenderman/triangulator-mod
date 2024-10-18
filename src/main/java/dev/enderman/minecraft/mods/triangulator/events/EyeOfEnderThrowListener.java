@@ -52,6 +52,6 @@ public class EyeOfEnderThrowListener {
 
         TriangulatorMod.LOGGER.debug("{}'s coordinates: {}.", player.getName(), location);
 
-        mod.startingPositionEyeMap.put(location, null);
+        mod.getStartingPositionEyeMap().put(location, null);
     }
 }

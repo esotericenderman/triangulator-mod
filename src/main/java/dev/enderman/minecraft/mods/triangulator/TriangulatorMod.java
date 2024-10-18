@@ -19,8 +19,16 @@ public class TriangulatorMod implements ModInitializer {
 	public static final String MOD_ID = "triangulator";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public HashMap<Vec3d, EyeOfEnderEntity> startingPositionEyeMap = new HashMap<>();
-	public ArrayList<Line> eyeOfEnderDirections = new ArrayList<>();
+	private final HashMap<Vec3d, EyeOfEnderEntity> startingPositionEyeMap = new HashMap<>();
+	private final ArrayList<Line> eyeOfEnderDirections = new ArrayList<>();
+
+	public HashMap<Vec3d, EyeOfEnderEntity> getStartingPositionEyeMap() {
+		return startingPositionEyeMap;
+	}
+
+	public ArrayList<Line> getEyeOfEnderDirections() {
+		return eyeOfEnderDirections;
+	}
 
 	@Override
 	public void onInitialize() {

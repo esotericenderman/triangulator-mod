@@ -41,7 +41,7 @@ public class EyeOfEnderBreakListener {
 
         Vec3d endPosition = new Vec3d(x, y, z);
 
-        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtility.inverMap(mod.startingPositionEyeMap);
+        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtility.inverMap(mod.getStartingPositionEyeMap());
         Vec3d startingPosition = null;
 
         for (Map.Entry<EyeOfEnderEntity, Vec3d> entry : eyePositionMap.entrySet()) {
@@ -76,7 +76,7 @@ public class EyeOfEnderBreakListener {
 
         TriangulatorMod.LOGGER.info("The line l of the path of the eye of ender is defined as follows: l = {}", eyeOfEnderDirection);
 
-        ArrayList<Line> eyeOfEnderDirections = mod.eyeOfEnderDirections;
+        ArrayList<Line> eyeOfEnderDirections = mod.getEyeOfEnderDirections();
 
         if (!eyeOfEnderDirections.contains(eyeOfEnderDirection)) {
             for (Line direction : eyeOfEnderDirections) {
@@ -95,7 +95,7 @@ public class EyeOfEnderBreakListener {
                 TriangulatorMod.LOGGER.info("Intersection of the two lines {} & {} found at {}", eyeOfEnderDirection, direction, intersection);
             }
 
-            mod.eyeOfEnderDirections.add(eyeOfEnderDirection);
+            mod.getEyeOfEnderDirections().add(eyeOfEnderDirection);
         }
     }
 }

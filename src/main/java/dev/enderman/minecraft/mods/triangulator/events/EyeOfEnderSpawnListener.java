@@ -38,15 +38,15 @@ public class EyeOfEnderSpawnListener {
 
         TriangulatorMod.LOGGER.debug("Comparing location of eye of ender to known throwing locations.");
 
-        for (Vec3d vector : mod.startingPositionEyeMap.keySet()) {
+        for (Vec3d vector : mod.getStartingPositionEyeMap().keySet()) {
             TriangulatorMod.LOGGER.debug("Comparing {} to {}", position, vector);
 
             if (vector.x == position.x && vector.z == position.z) {
                 TriangulatorMod.LOGGER.debug("Location vectors are equivalent, setting data for the eye of ender.");
 
-                mod.startingPositionEyeMap.put(vector, eyeOfEnder);
+                mod.getStartingPositionEyeMap().put(vector, eyeOfEnder);
 
-                TriangulatorMod.LOGGER.debug("{}: {}", vector, mod.startingPositionEyeMap.get(vector));
+                TriangulatorMod.LOGGER.debug("{}: {}", vector, mod.getStartingPositionEyeMap().get(vector));
             }
         }
     }
