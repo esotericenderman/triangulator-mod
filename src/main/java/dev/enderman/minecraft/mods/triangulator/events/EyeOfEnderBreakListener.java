@@ -1,12 +1,12 @@
 package dev.enderman.minecraft.mods.triangulator.events;
 
+import dev.enderman.minecraft.mods.triangulator.TriangulatorMod;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.util.math.Vec3d;
 import dev.enderman.minecraft.mods.triangulator.Line;
 import dev.enderman.minecraft.mods.triangulator.Line.SameLineException;
 import dev.enderman.minecraft.mods.triangulator.Line.ZeroVectorException;
-import dev.enderman.minecraft.mods.triangulator.Triangulator;
 import dev.enderman.minecraft.mods.triangulator.utility.MapUtility;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2d;
@@ -16,17 +16,17 @@ import java.util.Map;
 
 public class EyeOfEnderBreakListener {
 
-    private final Triangulator triangulator;
+    private final TriangulatorMod mod;
 
-    public EyeOfEnderBreakListener(Triangulator triangulator) {
-        this.triangulator = triangulator;
+    public EyeOfEnderBreakListener(TriangulatorMod mod) {
+        this.mod = mod;
     }
 
     public void registerListener() {
         ServerEntityEvents.ENTITY_UNLOAD.register((entity, world) -> {
-            Triangulator.LOGGER.debug("Entity {} unloaded in world {}.", entity, world);
+            TriangulatorMod.LOGGER.debug("Entity {} unloaded in world {}.", entity, world);
             if (entity instanceof EyeOfEnderEntity eyeOfEnder) {
-                Triangulator.LOGGER.debug("Entity is an eye of ender entity.");
+                TriangulatorMod.LOGGER.debug("Entity is an eye of ender entity.");
                 onEyeOfEnderSpawn(eyeOfEnder);
             }
         });
@@ -39,7 +39,7 @@ public class EyeOfEnderBreakListener {
 
         Vec3d endPosition = new Vec3d(x, y, z);
 
-        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtility.inverMap(triangulator.startingPositionEyeMap);
+        Map<EyeOfEnderEntity, Vec3d> eyePositionMap = MapUtility.inverMap(mod.startingPositionEyeMap);
         Vec3d startingPosition = null;
 
         for (Map.Entry<EyeOfEnderEntity, Vec3d> entry : eyePositionMap.entrySet()) {
@@ -55,8 +55,8 @@ public class EyeOfEnderBreakListener {
             return;
         }
 
-        Triangulator.LOGGER.debug("Eye of ender broken at {}.", endPosition);
-        Triangulator.LOGGER.debug("Its starting position was {}.", startingPosition);
+        TriangulatorMod.LOGGER.debug("Eye of ender broken at {}.", endPosition);
+        TriangulatorMod.LOGGER.debug("Its starting position was {}.", startingPosition);
 
         Vec3d difference = endPosition.subtract(startingPosition);
 
@@ -72,9 +72,9 @@ public class EyeOfEnderBreakListener {
             return;
         }
 
-        Triangulator.LOGGER.info("The line l of the path of the eye of ender is defined as follows: l = {}", eyeOfEnderDirection);
+        TriangulatorMod.LOGGER.info("The line l of the path of the eye of ender is defined as follows: l = {}", eyeOfEnderDirection);
 
-        ArrayList<Line> eyeOfEnderDirections = triangulator.eyeOfEnderDirections;
+        ArrayList<Line> eyeOfEnderDirections = mod.eyeOfEnderDirections;
 
         if (!eyeOfEnderDirections.contains(eyeOfEnderDirection)) {
             for (Line direction : eyeOfEnderDirections) {
@@ -90,10 +90,10 @@ public class EyeOfEnderBreakListener {
                     continue;
                 }
 
-                Triangulator.LOGGER.info("Intersection of the two lines {} & {} found at {}", eyeOfEnderDirection, direction, intersection);
+                TriangulatorMod.LOGGER.info("Intersection of the two lines {} & {} found at {}", eyeOfEnderDirection, direction, intersection);
             }
 
-            triangulator.eyeOfEnderDirections.add(eyeOfEnderDirection);
+            mod.eyeOfEnderDirections.add(eyeOfEnderDirection);
         }
     }
 }
