@@ -32,5 +32,13 @@
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"parent": {
+				"icon": "assets/triangulator/icon.png"
+			},
+			"update_checker": true
+		}
 	}
 }
