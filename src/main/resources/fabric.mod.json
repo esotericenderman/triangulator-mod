@@ -5,7 +5,15 @@
 	"name": "Triangulator",
 	"description": "Finds the exact location of a stronghold by throwing just 2 eyes of ender!",
 	"authors": [
-		"Slqmy"
+		{
+			"name": "Esoteric Enderman",
+			"contact": {
+				"email": "esotericenderman@gmail.com",
+				"homepage": "https://www.github.com/EsotericEnderman",
+				"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
+				"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
+			}
+		}
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
