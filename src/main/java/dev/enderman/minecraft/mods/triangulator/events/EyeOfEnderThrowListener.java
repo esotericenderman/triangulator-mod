@@ -22,18 +22,18 @@ public class EyeOfEnderThrowListener {
 
     public void registerListener() {
         UseItemCallback.EVENT.register((player, world, hand) -> {
-            TriangulatorMod.LOGGER.debug("Player {} used item in hand {} in world {}.", player, hand, world);
+            TriangulatorMod.LOGGER.info("Player {} used item in hand {} in world {}.", player, hand, world);
 
             ItemStack item = player.getStackInHand(hand);
 
-            TriangulatorMod.LOGGER.debug("item = {}", item);
+            TriangulatorMod.LOGGER.info("item = {}", item);
 
             Item itemType = item.getItem();
 
-            TriangulatorMod.LOGGER.debug("itemType = {}", itemType);
+            TriangulatorMod.LOGGER.info("itemType = {}", itemType);
 
             if (itemType == Items.ENDER_EYE) {
-                TriangulatorMod.LOGGER.debug("The item is in an eye of ender");
+                TriangulatorMod.LOGGER.info("The item is in an eye of ender");
                 onEyeOfEnderThrow(item, player);
             }
 
@@ -42,7 +42,7 @@ public class EyeOfEnderThrowListener {
     }
 
     private void onEyeOfEnderThrow(ItemStack eyeOfEnderItem, @NotNull PlayerEntity player) {
-        TriangulatorMod.LOGGER.debug("{} threw an eye of ender.", player.getName());
+        TriangulatorMod.LOGGER.info("{} threw an eye of ender.", player.getName());
 
         double x = player.getX();
         double y = player.getY();
@@ -50,7 +50,7 @@ public class EyeOfEnderThrowListener {
 
         Vec3d location = new Vec3d(x, y, z);
 
-        TriangulatorMod.LOGGER.debug("{}'s coordinates: {}.", player.getName(), location);
+        TriangulatorMod.LOGGER.info("{}'s coordinates: {}.", player.getName(), location);
 
         mod.getStartingPositionEyeMap().put(location, null);
     }
