@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "triangulator",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"name": "Triangulator",
 	"description": "Finds the exact location of a stronghold by throwing just 2 eyes of ender!",
 	"authors": [
