@@ -3,7 +3,7 @@
 	"id": "triangulator",
 	"version": "${version}",
 	"name": "Triangulator",
-	"description": "Finds the exact location of a stronghold by throwing just 2 eyes of ender!",
+	"description": "A Minecraft Fabric mod that attempts to find the stronghold location based off of two eyes of ender.",
 	"authors": [
 		{
 			"name": "Esoteric Enderman",
