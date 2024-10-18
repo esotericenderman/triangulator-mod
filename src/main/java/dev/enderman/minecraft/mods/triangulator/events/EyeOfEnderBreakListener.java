@@ -27,7 +27,7 @@ public class EyeOfEnderBreakListener {
 
     public void registerListener() {
         ServerEntityEvents.ENTITY_UNLOAD.register((entity, world) -> {
-            TriangulatorMod.LOGGER.info("Entity {} unloaded in world {}.", entity, world);
+            TriangulatorMod.LOGGER.debug("Entity {} unloaded in world {}.", entity, world);
             if (entity instanceof EyeOfEnderEntity eyeOfEnder) {
                 TriangulatorMod.LOGGER.info("Entity is an eye of ender entity.");
                 onEyeOfEnderSpawn(eyeOfEnder);
