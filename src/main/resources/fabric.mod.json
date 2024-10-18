@@ -23,7 +23,7 @@
 	"icon": "assets/triangulator/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
+		"client": [
 			"dev.enderman.minecraft.mods.triangulator.TriangulatorMod"
 		]
 	},
