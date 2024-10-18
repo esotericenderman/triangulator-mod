@@ -35,7 +35,7 @@ public class Line {
         return startingPointClone.add(directionVectorClone.mul(parameterValue));
     }
 
-    @NotNull public double getParameterValueForPoint(Vector2d point) throws PointNotOnLineException {
+    public double getParameterValueForPoint(Vector2d point) throws PointNotOnLineException {
         if (!includesPoint(point)) {
             throw new PointNotOnLineException();
         }
@@ -89,7 +89,7 @@ public class Line {
         return otherLine.getPointForParameterValue(t2);
     }
 
-    public boolean includesPoint(Vector2d point) {
+    public boolean includesPoint(@NotNull Vector2d point) {
         Vector2d clonedPoint = new Vector2d(point.x, point.y);
 
         return clonedPoint.equals(startingPoint) || VectorUtil.areLinearlyDependent(clonedPoint.sub(startingPoint), directionVector);
