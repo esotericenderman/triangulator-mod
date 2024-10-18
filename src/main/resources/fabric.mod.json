@@ -9,15 +9,15 @@
 			"name": "Esoteric Enderman",
 			"contact": {
 				"email": "esotericenderman@gmail.com",
-				"homepage": "https://www.github.com/EsotericEnderman",
-				"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
-				"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
+				"homepage": "https://www.github.com/EsotericEnderman"
 			}
 		}
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"email": "esotericenderman@gmail.com",
+		"homepage": "https://www.github.com/EsotericEnderman/triangulator-mod.git",
+		"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
+		"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
 	},
 	"license": "MIT",
 	"icon": "assets/triangulator/icon.png",
