@@ -1,5 +1,7 @@
 # Triangulator Mod
 
+<sup>Generated from <a href="https://github.com/FabricMC/fabric-example-mod">FabricMC/fabric-example-mod</a></sup>
+
 > A Minecraft Fabric mod that attempts to find the stronghold location based off of two eyes of ender.
 
 ## License
