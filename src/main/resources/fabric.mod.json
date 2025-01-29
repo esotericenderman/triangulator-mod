@@ -9,15 +9,15 @@
 			"name": "Esoteric Enderman",
 			"contact": {
 				"email": "esotericenderman@gmail.com",
-				"homepage": "https://www.github.com/EsotericEnderman"
+				"homepage": "https://www.github.com/esotericenderman"
 			}
 		}
 	],
 	"contact": {
 		"email": "esotericenderman@gmail.com",
-		"homepage": "https://www.github.com/EsotericEnderman/triangulator-mod.git",
-		"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
-		"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
+		"homepage": "https://github.com/esotericenderman/triangulator-mod?tab=readme-ov-file",
+		"issues": "https://github.com/esotericenderman/triangulator-mod/issues",
+		"sources": "https://github.com/esotericenderman/triangulator-mod.git"
 	},
 	"license": "GPL-3.0",
 	"icon": "assets/triangulator/icon.png",
