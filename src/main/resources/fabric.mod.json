@@ -19,7 +19,7 @@
 		"issues": "https://github.com/EsotericEnderman/triangulator-mod/issues",
 		"sources": "https://github.com/EsotericEnderman/triangulator-mod.git"
 	},
-	"license": "MIT",
+	"license": "GPL-3.0",
 	"icon": "assets/triangulator/icon.png",
 	"environment": "*",
 	"entrypoints": {
